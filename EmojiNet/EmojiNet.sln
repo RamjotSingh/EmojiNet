@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31410.414
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmojiSiteProcessor", "EmojiSiteProcessor\EmojiSiteProcessor.csproj", "{56B5117E-23D5-4206-B85C-DB4D07977090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamjotSingh.EmojiNet", "RamjotSingh.EmojiNet\RamjotSingh.EmojiNet.csproj", "{F60C38CA-8502-4254-876E-1CBEF90B34F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56B5117E-23D5-4206-B85C-DB4D07977090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B5117E-23D5-4206-B85C-DB4D07977090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B5117E-23D5-4206-B85C-DB4D07977090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B5117E-23D5-4206-B85C-DB4D07977090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60C38CA-8502-4254-876E-1CBEF90B34F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60C38CA-8502-4254-876E-1CBEF90B34F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60C38CA-8502-4254-876E-1CBEF90B34F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60C38CA-8502-4254-876E-1CBEF90B34F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C068B0E8-B2A6-4CF0-9415-DF0FE9D5A038}
+	EndGlobalSection
+EndGlobal
