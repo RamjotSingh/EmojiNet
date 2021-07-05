@@ -2,6 +2,11 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+resources:
+  repositories:
+  - repository: GithubPipelines
+    type: git
+    name: GithubPipelines
 
 trigger:
 - main
@@ -10,12 +15,21 @@ pool:
   vmImage: windows-latest
 
 steps:
+- task: CopyFiles@2
+  displayName: "Copy build time files"
+  inputs:
+    SourceFolder: 'Build@GithubPipelines'
+    Contents: '**'
+    TargetFolder: 'Build'
+    OverWrite: true
 - task: NuGetCommand@2
+  displayName: "Restore nuget packages"
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
 - task: MSBuild@1
+  displayName: "Build solution"
   inputs:
     solution: '**/*.sln'
     msbuildArchitecture: 'x64'
@@ -24,3 +38,9 @@ steps:
     maximumCpuCount: true
     logProjectEvents: true
     createLogFile: true
+- task: PublishPipelineArtifact@1
+  displayName: "Publish nuget files"
+  inputs:
+    targetPath: 'RamjotSingh.EmojiNet\bin\Release'
+    artifact: 'NugetPackages'
+    publishLocation: 'pipeline'
