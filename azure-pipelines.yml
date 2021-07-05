@@ -15,10 +15,11 @@ pool:
   vmImage: windows-latest
 
 steps:
+- checkout: GithubPipelines
 - task: CopyFiles@2
   displayName: "Copy build time files"
   inputs:
-    SourceFolder: 'Build@GithubPipelines'
+    SourceFolder: 'GithubPipelines/Build'
     Contents: '**'
     TargetFolder: 'Build'
     OverWrite: true
