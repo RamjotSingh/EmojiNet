@@ -11,7 +11,6 @@
     <RepositoryUrl>https://github.com/RamjotSingh/EmojiNet</RepositoryUrl>
     <Description>Helpers to allow detection and processing of Emojis in .Net</Description>
     <Version>0.1.0</Version>
-    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
 
@@ -22,7 +21,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <!-- Include the PDB in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <DelaySign>true</DelaySign>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), .gitignore))\Build\StrongnamingKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
